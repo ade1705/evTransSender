@@ -27,8 +27,8 @@ export class MessageSender {
 				from: `"${evTransMessage.from.name} 👻" <${evTransMessage.from.email}>`,
 				to: `"${evTransMessage.to[1].email} 👻" <${evTransMessage.to[1].name}>`,
 				subject: evTransMessage.subject, // Subject line
-				text: "Hello world?", // plain text body
-				html: "<b>Hello world?</b>", // html body
+				text: evTransMessage.text, // plain text body
+				html: evTransMessage.html, // html body
 			});
 			console.log(info);
 		} catch (error) {
